@@ -22,7 +22,9 @@ public class FigurC_mitSchleife extends PApplet
 
     public void zeichneBildC() {
         // ***** hier kommen deine Anweisungen hin ************
-   
+        for(int i=0; i<=8;i++){
+        rect(10+i*50,10,50,50);
+    }
         // ***** Ende der eigenen Anweisungen **********
     }
 
