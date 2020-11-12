@@ -1,14 +1,15 @@
 
 import processing.core.PApplet;
+import processing.core.PFont;
 
 /**
- * Klasse figurC_mitSchleife.
- * Beschreibung: Die FigurC aus der vorherigen Aufgabe soll mit einer Zählschleife implementiert werden.
+ * Klasse Kaffeehaus.
+ * Beschreibung: 
  *
- * @author Simon Gebert 
- * @version Feb2020
+ * @author (Ihr Name) 
+ * @version (eine Versionsnummer oder ein Datum)
  */
-public class FigurC_mitSchleife extends PApplet
+public class Kaffeehaus extends PApplet
 {       
     /**
      * settings() Methode 
@@ -17,16 +18,8 @@ public class FigurC_mitSchleife extends PApplet
     @Override
     public void settings()
     {
-        size(500,350); // Festlegen der Fenstergröße
+        size(640,400);
     }        
-
-    public void zeichneBildC() {
-        // ***** hier kommen deine Anweisungen hin ************
-        for(int i=0; i<=8;i++){
-            rect(10+i*50,10,50,50);
-        }
-        // ***** Ende der eigenen Anweisungen **********
-    }
 
     /**
      * Die setup() Methode wird einmal aufgerufen, wenn das Programm startet.
@@ -36,7 +29,23 @@ public class FigurC_mitSchleife extends PApplet
     @Override
     public void setup()
     {
-        zeichneBildC(); // Aufruf deiner Methode
+     parallelen();
+    }
+    public void parallelen(){
+        for(int i=0;i<10;i++){
+            
+        }
+    }
+
+    /**
+     * Die draw() Methode wird nach der setup() Methode aufgerufen
+     * und führt den Code innerhalb ihres Blocks fortlaufend aus,
+     * bis das Programm gestoppt oder noLoop() aufgerufen wird.
+     */
+    @Override
+    public void draw()
+    {
+
     }
 
     /**
@@ -44,7 +53,7 @@ public class FigurC_mitSchleife extends PApplet
      *
      */    
     public static void main(String _args[]){ 
-        PApplet.main(new String[] {FigurC_mitSchleife.class.getName() });
+        PApplet.main(new String[] {Kaffeehaus.class.getName() });
     }
 
 }
