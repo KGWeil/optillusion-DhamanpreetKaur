@@ -28,6 +28,8 @@ public class Figuren extends PApplet
         // ***** hier kommen deine Anweisungen hin ************
 
         // ***** Ende der eigenen Anweisungen **********
+        ellipse(100,100,100,100);
+        rect(100,200,100,100);
     }
 
     //***** Zusatzaufgabe bzw. Hausaufgabe *************
