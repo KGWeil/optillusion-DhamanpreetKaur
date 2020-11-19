@@ -11,6 +11,7 @@ import processing.core.PFont;
  */
 public class Kaffeehaus extends PApplet
 {       
+    int s=40;
     /**
      * settings() Methode 
      * Fenstergröße size(int width, int height) und smooth(int level) muss hier eingestellt werden.
@@ -29,11 +30,44 @@ public class Kaffeehaus extends PApplet
     @Override
     public void setup()
     {
-     parallelen();
+        background(255);
+
+        strokeWeight(0);
+        stroke(0);
+        fill(0);
+        zeichneQuadrate();
+        zeichneAlleQuadrate();
+        strokeWeight(2);
+        stroke(150);
+        parallelen();//graue Parallelen
+
     }
+
+    /**
+     * Methode parallelen
+     * zeichne 10 Parallelen
+     */
     public void parallelen(){
         for(int i=0;i<10;i++){
-            
+            line(0,i*40,640,i*40); 
+        }
+    }
+
+    /**
+     * Methode zeichneQuadrate
+     * zeichne 8 Quadrate
+     */
+    public void zeichneQuadrate(){
+        for(int i=0;i<8;i++){
+            rect(10+i*80,0,40,40);
+        }
+    }
+
+    public void zeichneAlleQuadrate(){
+        for(int k=0; k<10; k++){
+            for(int i=0;i<8;i++){
+                rect(10+i*s*2,5+k*s,s,s);
+            }
         }
     }
 
