@@ -18,15 +18,7 @@ public class FigurC_mitSchleife extends PApplet
     public void settings()
     {
         size(500,350); // Festlegen der Fenstergröße
-    }        
-
-    public void zeichneBildC() {
-        // ***** hier kommen deine Anweisungen hin ************
-        for(int i=0; i<=8;i++){
-            rect(10+i*50,10,50,50);
-        }
-        // ***** Ende der eigenen Anweisungen **********
-    }
+    }      
 
     /**
      * Die setup() Methode wird einmal aufgerufen, wenn das Programm startet.
@@ -37,6 +29,21 @@ public class FigurC_mitSchleife extends PApplet
     public void setup()
     {
         zeichneBildC(); // Aufruf deiner Methode
+    }
+    
+    public void zeichneBildC(){
+        ellipse(100,100,100,100);
+        rect(100,200,100,100);
+        rect(50,150,100,100);
+        triangle(100,250,50,350,150,350);
+        rect(300,50,100,100);
+        ellipse(350,100,70,70);
+        ellipse(350,100,50,50);
+        ellipse(350,100,30,30);
+        ellipse(350,250,120,120);
+        rect(310,210,76,76);
+        rect(325,225,50,50);
+        rect(340,240,20,20);
     }
 
     /**

@@ -12,7 +12,9 @@ import processing.core.PFont;
 public class Kaffeehaus extends PApplet
 {       
     int s=40;
+
      int[] abstaende={10, 20, 30, 20, 10, 20, 30, 20, 10, 20};
+
     /**
      * settings() Methode 
      * Fenstergröße size(int width, int height) und smooth(int level) muss hier eingestellt werden.
@@ -41,7 +43,7 @@ public class Kaffeehaus extends PApplet
         strokeWeight(2);
         stroke(150);
         parallelen();//graue Parallelen
-
+        
     }
 
     /**
@@ -65,12 +67,15 @@ public class Kaffeehaus extends PApplet
     }
 
     public void zeichneAlleQuadrate(){
-        for(int k=0; k<10; k++){
+        for(int k=0;k<10;k++){
             for(int i=0;i<8;i++){
                 rect(abstaende[k]+i*s*2,1+k*s,s,s);
             }
         }
+       
     }
+    
+    
 
     /**
      * Die draw() Methode wird nach der setup() Methode aufgerufen
