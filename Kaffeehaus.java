@@ -13,8 +13,7 @@ public class Kaffeehaus extends PApplet
 {       
     int s=40;
 
-     int[] abstaende={10, 20, 30, 20, 10, 20, 30, 20, 10, 20};
-
+    int[] abstaende={10, 20, 30, 20, 10, 20, 30, 20, 10, 20};
     /**
      * settings() Methode 
      * Fenstergröße size(int width, int height) und smooth(int level) muss hier eingestellt werden.
