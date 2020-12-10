@@ -30,7 +30,9 @@ public class Welle1 extends PApplet
     @Override
     public void setup()
     {
-       zeichneQuadrat(10,10,0, true);
+        zeichneQuadrat(10,10,0, true);
+        alleQuadrate();
+        parallelen();
     }
 
     /**
@@ -44,9 +46,54 @@ public class Welle1 extends PApplet
     {
         fill(farbe);
         rect(x,y,s,s);
-        fill(255);
-        circle(x+(1/6)*s,y+s/6,(1/6)*s);
-        circle(x+(1/6)*s,y+s-(1/6)*s,(1/6)*s);
+
+        if (farbe==0){ 
+            fill(255);
+        }else{
+            fill(0);
+        }
+        if(links){
+            circle(x+s-s/6,y+s/6,s/6);
+            circle(x+s-s/6,y+s-s/6,s/6);
+        }else{
+            circle(x+(1.f/6)*s,y+s-(1.f/6)*s,((1.f/6)*s));
+            circle(x+s/6,y+s/6,s/6);
+        }
+    }
+
+    public void alleQuadrate(){
+        int aktuellefarbe=0;
+        boolean aktuelleseite=true; 
+        for(int k=0;k<4;k++){
+            for(int i=0;i<4;i++){
+                zeichneQuadrat(10+i*s,10+k*s,aktuellefarbe,aktuelleseite);
+                if (aktuellefarbe==0){
+                    aktuellefarbe=255;
+                }else{
+                    aktuellefarbe=0;
+
+                }
+            }
+            if (aktuellefarbe==0){
+                aktuellefarbe=255;
+            }else{
+                aktuellefarbe=0;
+            }
+            if (aktuelleseite==true){
+                aktuelleseite=false;
+            }else{
+                aktuelleseite=true;
+            }
+        }
+
+    }
+
+    public void parallelen(){
+        strokeWeight(5);
+        stroke(8, 250, 78);
+        for(int i=0;i<5;i++){
+            line(10,10+i*s,400,10+i*s); 
+        }
     }
 
     /**
