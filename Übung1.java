@@ -30,8 +30,13 @@ public class Übung1 extends PApplet
     public void setup()
     {
         background(195);
-        
+        viereck();
 
+    }
+    
+    public void viereck(){
+        fill(175,100,220);
+        quad(0,0,25,10,25,25,0,15);
     }
 
     /**
