@@ -10,7 +10,9 @@ import processing.core.PFont;
  * @version (eine Versionsnummer oder ein Datum)
  */
 public class Übung1 extends PApplet
-{       
+{  
+    int[] abstaende={0,25,0,25,0,25,0,25};
+    int s=25;
     /**
      * settings() Methode 
      * Fenstergröße size(int width, int height) und smooth(int level) muss hier eingestellt werden.
@@ -18,7 +20,7 @@ public class Übung1 extends PApplet
     @Override
     public void settings()
     {
-        size(500,500);
+        size(400,400);
     }        
 
     /**
@@ -30,13 +32,30 @@ public class Übung1 extends PApplet
     public void setup()
     {
         background(195);
+        fill(175,100,220);
+        stroke(175, 100, 220);
         viereck();
+        zeichneallevierecke();
 
     }
     
     public void viereck(){
-        fill(175,100,220);
-        quad(0,0,25,10,25,25,0,15);
+        quad(0,0,25,10,25,35,0,25);
+        for (int i=0; i<8; i++){
+            quad(i*50,0,25+i*50,10,25+i*50,35,i*50,25);
+        }
+        for (int i=0; i<8; i++){
+           stroke(0);
+           fill(0);
+           quad(25+i*50,10,50+i*50,0,50+i*50,25,25+i*50,35);
+        }
+    }
+    public void zeichneallevierecke(){
+        for (int k=0; k<8; k++){
+            for(int i=0; i<8; i++){
+                
+            }
+        }
     }
 
     /**
