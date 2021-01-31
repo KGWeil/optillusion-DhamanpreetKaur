@@ -11,7 +11,6 @@ import processing.core.PFont;
  */
 public class Übung1 extends PApplet
 {  
-    int[] abstaende={0,25,0,25,0,25,0,25};
     int s=25;
     /**
      * settings() Methode 
@@ -32,48 +31,48 @@ public class Übung1 extends PApplet
     public void setup()
     {
         background(195);
-        fill(175,100,220);
-        stroke(175, 100, 220);
-        viereck();
         zeichneallevierecke();
+        viereck();
+    }
 
-    }
-    
-    public void viereck(){
-        quad(0,0,25,10,25,35,0,25);
-        for (int i=0; i<8; i++){
-            quad(i*50,0,25+i*50,10,25+i*50,35,i*50,25);
-        }
-        for (int i=0; i<8; i++){
-           stroke(0);
-           fill(0);
-           quad(25+i*50,10,50+i*50,0,50+i*50,25,25+i*50,35);
-        }
-    }
-    public void zeichneallevierecke(){
-        for (int k=0; k<8; k++){
-            for(int i=0; i<8; i++){
-                
+   
+
+       public void viereck(){
+            quad(0,0,25,10,25,35,0,25);
+            for (int i=0; i<8; i++){
+                quad(i*50,0,25+i*50,10,25+i*50,35,i*50,25);
+            }
+            for (int i=0; i<8; i++){
+                stroke(0);
+                fill(0);
+                quad(25+i*50,10,50+i*50,0,50+i*50,25,25+i*50,35);
             }
         }
-    }
 
-    /**
-     * Die draw() Methode wird nach der setup() Methode aufgerufen
-     * und führt den Code innerhalb ihres Blocks fortlaufend aus,
-     * bis das Programm gestoppt oder noLoop() aufgerufen wird.
-     */
-    @Override
-    public void draw()
-    {
+        public void zeichneallevierecke(){
+            for (int k=0; k<8; k++){
+                for(int i=0; i<8; i++){
 
-    }
+                }
+            }
+        }
 
-    /**
-     * Mit der main()-Methode wird das Programm gestartet.
-     *
-     */    
-    public static void main(String _args[]){ 
+        /**
+         * Die draw() Methode wird nach der setup() Methode aufgerufen
+         * und führt den Code innerhalb ihres Blocks fortlaufend aus,
+         * bis das Programm gestoppt oder noLoop() aufgerufen wird.
+         */
+        @Override
+        public void draw()
+        {
+
+        }
+
+        /**
+         * Mit der main()-Methode wird das Programm gestartet.
+         *
+         */    
+        public static void main(String _args[]){ 
         PApplet.main(new String[] {Übung1.class.getName() });
     }
 
